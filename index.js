@@ -17,16 +17,14 @@ function onStartChangeBodyColor() {
   if (!isActive) {
     isActive = true;
     intervalId = setInterval(() => {      
-      refs.bodyRef.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
-      console.log('HLEB Start')
+      refs.bodyRef.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];      
     }, INTERVALTIME)
   }  
 };
 
 function onStopChangeBodyColor() {
   clearInterval(intervalId)
-  isActive = false;
-  console.log('CLICK STOP');
+  isActive = false;  
 };
 
 const randomIntegerFromInterval = (min, max) => {
